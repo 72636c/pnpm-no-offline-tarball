@@ -21,4 +21,4 @@ jobs:
       - name: Install dependencies
         env:
           PNPM_VERSION: ${{ matrix.version }}
-        run: install.sh
+        run: ./install.sh

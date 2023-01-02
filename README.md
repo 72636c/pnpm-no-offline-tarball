@@ -1,5 +1,7 @@
 # pnpm-no-offline-tarball
 
+[![Integrate](https://github.com/72636c/pnpm-no-offline-tarball/actions/workflows/integrate.yaml/badge.svg)](https://github.com/72636c/pnpm-no-offline-tarball/actions/workflows/integrate.yaml)
+
 ## v7.19.0
 
 ```diff
