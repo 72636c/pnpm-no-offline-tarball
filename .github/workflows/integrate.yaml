@@ -9,6 +9,7 @@ jobs:
   install:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         version:
           - 7.19.0
@@ -17,23 +18,7 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v3
 
-      - name: Fetch dependencies
-        env:
-          PNPM_VERSION: ${{ matrix.version }}
-        run: |
-          docker build \
-            --build-arg PNPM_VERSION \
-            --tag "ci:${PNPM_VERSION}" \
-            .
-
       - name: Install dependencies
         env:
           PNPM_VERSION: ${{ matrix.version }}
-        run: |
-          docker run \
-            --volume "${PWD}/:/workdir" \
-            --volume /workdir/.pnpm-store \
-            "ci:${PNPM_VERSION}" \
-            sh \
-            -c \
-            'pnpm install --offline --recursive'
+        run: install.sh
