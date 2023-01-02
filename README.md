@@ -32,3 +32,5 @@ PNPM_VERSION=7.20.0 ./install.sh
 + undefined
 -  ERR_PNPM_NO_OFFLINE_TARBALL  A package is missing from the store but cannot download it in offline mode. The missing package may be downloaded from https://registry.npmjs.org/@types/node/-/node-18.11.18.tgz.
 ```
+
+[pnpm/pnpm#5866](https://github.com/pnpm/pnpm/issues/5866)
