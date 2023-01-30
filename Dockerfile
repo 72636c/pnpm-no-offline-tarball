@@ -6,7 +6,7 @@ ARG PNPM_VERSION
 
 RUN corepack enable
 RUN corepack prepare "pnpm@${PNPM_VERSION}" --activate
-RUN pnpm config set store-dir /workdir/.pnpm-store
+RUN npm config set store-dir /workdir/.pnpm-store
 
 WORKDIR /workdir
 
